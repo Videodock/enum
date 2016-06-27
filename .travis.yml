@@ -1,4 +1,3 @@
----
 sudo: false
 language: php
 php:
@@ -14,18 +13,11 @@ matrix:
     - php: nightly
 before_install:
   - composer install --dev -n --prefer-source
-  - phpenv rehash
 script:
   - ./vendor/bin/phpunit -c phpunit.xml.dist
-after_script:
-  - php vendor/bin/coveralls
 notifications:
   email:
     on_failure: always
     on_success: change
     recipients:
-      - dev-ci@maxmind.com
-  slack:
-    rooms:
-      secure: "OtowN1lGa5MAhn6gl87aB3kXXeOKLGIb4e9dBud/tPt/1sQDoZVj6m6VWtpsXh6iXL7lWetVbpmeZCydSRumgVMIy7+45uMQPvdoWBFCT+rq67yDb3gyvFknpjBuit0Q91lTDoGTUSgtqk+PSZX5LvDgT4b8WQFBb/dcB35hqis=\n"
-Status API Training Shop Blog About
+      - tech@videodock.com
