@@ -19,6 +19,6 @@ class EnumHelper
     public static function isEnum($class)
     {
         $uses = class_uses($class);
-        return array_key_exists(Enum::class,$uses);
+        return array_key_exists(Enum::class, $uses);
     }
 }
